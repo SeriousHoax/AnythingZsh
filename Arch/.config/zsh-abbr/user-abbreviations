@@ -1,0 +1,31 @@
+## zsh-abbr
+
+# Pacman
+abbr "reff"="sudo pacman -Syyu"
+abbr "pin"="sudo pacman -S"
+abbr "pss"="pacman -Ss"
+abbr "rsc"="sudo pacman -Rsc"
+
+# Paru
+abbr "asas"="paru"
+abbr "ref"="paru -Syyu"
+abbr "ass"="paru -Ss"
+
+# Apps
+abbr "ff"="fastfetch"
+
+# Update mirrors: Arch
+abbr "upd-a"="rate-mirrors --disable-comments-in-file --protocol=https arch --max-delay 7200 | sudo tee /etc/pacman.d/mirrorlist"
+
+# Update mirrors: Chaotic-Aur
+abbr "upd-c"="rate-mirrors --disable-comments-in-file --protocol=https chaotic-aur  | sudo tee /etc/pacman.d/chaotic-mirrorlist"
+
+# Update all mirrors, Pacman, AUR and Chaotic-Aur packages
+abbr "upd-all"="upd-a && upd-c && paru -Syyu"
+
+# Show my IP address
+abbr 'myip'='echo "$(curl -s ifconfig.me)"'
+
+# Incremental search of Local and Remote package database, with detailed information on preview pane. All packages on the database are listed at first
+abbr "p-fzf-local"="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
+abbr "p-fzf-remote"="pacman -Slq | fzf --preview 'pacman -Si {}' --layout=reverse"

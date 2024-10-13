@@ -1,0 +1,33 @@
+## Aliases
+
+# Pacman
+alias reff='sudo pacman -Syyu'
+alias pin='sudo pacman -S'
+alias rsc='sudo pacman -Rsc'
+alias pss='pacman -Ss'
+
+# Paru
+alias asas=paru
+alias ref='paru -Syyu'
+alias ass='paru -Ss'
+
+# Apps
+alias ff=fastfetch
+
+# Update mirrors: Arch
+alias upd-a='rate-mirrors --disable-comments-in-file --protocol=https arch --max-delay 7200 | sudo tee /etc/pacman.d/mirrorlist'
+
+# Update mirrors: Chaotic-Aur
+alias upd-c='rate-mirrors --disable-comments-in-file --protocol=https chaotic-aur  | sudo tee /etc/pacman.d/chaotic-mirrorlist'
+
+# Update all mirrors, Pacman, AUR and Chaotic-Aur packages
+alias upd-all='upd-a && upd-c && paru -Syyu'
+
+# Show my IP address
+alias 'myip'='echo "$(curl -s ifconfig.me)"'
+
+# Incremental search of Local and Remote package database, with detailed information on preview pane. All packages on the database are listed at first.
+
+alias 'p-fzf-local'="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
+
+alias 'p-fzf-remote'="pacman -Slq | fzf --preview 'pacman -Si {}' --layout=reverse"

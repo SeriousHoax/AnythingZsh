@@ -1,0 +1,14 @@
+## Aliases
+
+# Zypper
+alias ref='sudo zypper ref && sudo zypper list-updates && sudo zypper dup'
+alias zin='sudo zypper in'
+alias zss='zypper search -S'
+alias zrm='sudo zypper remove -u'
+alias 'z-orphan'='sudo zypper packages --orphaned'
+alias 'z-und'='zypper packages --unneeded'
+alias 'zrm-und'="sudo zypper remove $(zypper packages --unneeded | awk '/^i/ {print $5}')"
+alias zclean='sudo zypper clean --all'
+
+# Show my IP address
+alias 'myip'='echo "$(curl -s ifconfig.me)"'

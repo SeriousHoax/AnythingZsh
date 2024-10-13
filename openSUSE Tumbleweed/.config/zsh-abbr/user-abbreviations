@@ -1,0 +1,17 @@
+## zsh-abbr
+
+# Zypper
+abbr "ref"="sudo zypper ref && sudo zypper list-updates && sudo zypper dup"
+abbr "zin"="sudo zypper in"
+abbr "zss"="zypper search -S"
+abbr "zrm"="sudo zypper remove -u"
+abbr "z-orphan"="sudo zypper packages --orphaned"
+abbr "z-und"="zypper packages --unneeded"
+abbr "zrm-und"="sudo zypper remove $(zypper packages --unneeded | awk '/^i/ {print $5}')"
+abbr "zclean"="sudo zypper clean --all"
+
+# Apps
+abbr "ff"="fastfetch"
+
+# Show my IP address
+abbr 'myip'='echo "$(curl -s ifconfig.me)"'
