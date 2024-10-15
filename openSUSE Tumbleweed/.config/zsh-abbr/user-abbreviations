@@ -2,6 +2,7 @@
 
 # Zypper
 abbr "ref"="sudo zypper ref && sudo zypper list-updates && sudo zypper dup"
+abbr "asas"="sudo zypper dup"
 abbr "zin"="sudo zypper in"
 abbr "zss"="zypper search -S"
 abbr "zrm"="sudo zypper remove -u"
