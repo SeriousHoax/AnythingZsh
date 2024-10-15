@@ -4,7 +4,7 @@
 alias ref='sudo zypper ref && sudo zypper list-updates && sudo zypper dup'
 alias asas='sudo zypper dup'
 alias zin='sudo zypper in'
-alias zss='zypper search -S'
+alias zss='zypper search -s'
 alias zrm='sudo zypper remove -u'
 alias 'z-orphan'='sudo zypper packages --orphaned'
 alias 'z-und'='zypper packages --unneeded'
