@@ -4,7 +4,7 @@
 abbr "ref"="sudo zypper ref && sudo zypper list-updates && sudo zypper dup"
 abbr "asas"="sudo zypper dup"
 abbr "zin"="sudo zypper in"
-abbr "zss"="zypper search -S"
+abbr "zss"="zypper search -s"
 abbr "zrm"="sudo zypper remove -u"
 abbr "z-orphan"="sudo zypper packages --orphaned"
 abbr "z-und"="zypper packages --unneeded"
