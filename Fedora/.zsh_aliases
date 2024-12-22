@@ -1,0 +1,14 @@
+## Aliases
+
+# DNF
+alias asas='sudo dnf upgrade'
+alias ref='sudo dnf upgrade --refresh'
+alias din='sudo dnf install'
+alias drm='sudo dnf remove'
+alias dss='dnf search'
+
+# Apps
+alias ff=fastfetch
+
+# Show my IP address
+alias 'myip'='echo "$(curl -s ifconfig.me)"'

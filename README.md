@@ -8,3 +8,7 @@ curl -o ~/AnythingZsh-Arch.sh https://raw.githubusercontent.com/SeriousHoax/Anyt
 ```
 curl -o ~/AnythingZsh-Tumbleweed.sh https://raw.githubusercontent.com/SeriousHoax/AnythingZsh/refs/heads/main/AnythingZsh-Tumbleweed.sh && chmod +x ~/AnythingZsh-Tumbleweed.sh && ~/AnythingZsh-Tumbleweed.sh
 ```
+# Set it up on Fedora
+```
+curl -o ~/AnythingZsh-Fedora.sh https://raw.githubusercontent.com/SeriousHoax/AnythingZsh/refs/heads/main/AnythingZsh-Fedora.sh && chmod +x ~/AnythingZsh-Fedora.sh && ~/AnythingZsh-Fedora.sh
+```

@@ -1,0 +1,14 @@
+## zsh-abbr
+
+# DNF
+abbr "asas"="sudo dnf upgrade"
+abbr "ref"="sudo dnf upgrade --refresh"
+abbr "din"="sudo dnf install"
+abbr "drm"="sudo dnf remove"
+abbr "dss"="dnf search"
+
+# Apps
+abbr "ff"="fastfetch"
+
+# Show my IP address
+abbr 'myip'='echo "$(curl -s ifconfig.me)"'
