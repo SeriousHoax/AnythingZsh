@@ -3,7 +3,7 @@
 # Pacman
 alias reff='sudo pacman -Syyu'
 alias pin='sudo pacman -S'
-alias rsc='sudo pacman -Rsc'
+alias prm='sudo pacman -Rss'
 alias pss='pacman -Ss'
 
 # Paru

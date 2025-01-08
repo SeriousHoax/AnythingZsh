@@ -4,7 +4,7 @@
 abbr "reff"="sudo pacman -Syyu"
 abbr "pin"="sudo pacman -S"
 abbr "pss"="pacman -Ss"
-abbr "rsc"="sudo pacman -Rsc"
+abbr "prm"="sudo pacman -Rss"
 
 # Paru
 abbr "asas"="paru"
