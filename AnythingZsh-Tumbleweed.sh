@@ -33,5 +33,40 @@ cd ~
 echo -e "${GREEN}Removing the downloaded openSUSE Tumbleweed folder...${NC}"
 rm -rf ~/openSUSE\ Tumbleweed
 
+# Step 8: Downloading and Installing MesloLGS Nerd Fonts
+echo -e "${GREEN}Downloading and installing MesloLGS Nerd Fonts...${NC}"
+
+# Define new font URLs and destination
+FONT_URLS=(
+  "https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/MesloLGS%20NF%20Regular.ttf"
+  "https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/MesloLGS%20NF%20Bold.ttf"
+  "https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/MesloLGS%20NF%20Italic.ttf"
+  "https://raw.githubusercontent.com/romkatv/powerlevel10k-media/master/MesloLGS%20NF%20Bold%20Italic.ttf"
+)
+FONT_DEST_DIR="$HOME/nerd-fonts"
+SYSTEM_FONT_DIR="/usr/share/fonts/TTF"
+
+# Create temporary font directory in home
+mkdir -p $FONT_DEST_DIR
+
+# Download each font
+for FONT_URL in "${FONT_URLS[@]}"; do
+  wget -q $FONT_URL -P $FONT_DEST_DIR
+done
+
+# Create system font directory if it doesn't exist
+sudo mkdir -p $SYSTEM_FONT_DIR
+
+# Move fonts to the system font directory
+sudo mv $FONT_DEST_DIR/* $SYSTEM_FONT_DIR/
+
+# Update font cache
+echo -e "${GREEN}Updating font cache...${NC}"
+sudo fc-cache -fv
+
+# Remove temporary font directory
+echo -e "${GREEN}Cleaning up downloaded font files...${NC}"
+rm -rf $FONT_DEST_DIR
+
 # Final Step: Done
 echo -e "${GREEN}Done.${NC}"
