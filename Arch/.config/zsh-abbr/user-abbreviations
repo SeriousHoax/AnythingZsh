@@ -5,6 +5,7 @@ abbr "reff"="sudo pacman -Syyu"
 abbr "pin"="sudo pacman -S"
 abbr "pss"="pacman -Ss"
 abbr "prm"="sudo pacman -Rsn"
+abbr "rml"="sudo rm /var/lib/pacman/db.lck"
 
 # Paru
 abbr "asas"="paru"

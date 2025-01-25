@@ -5,6 +5,7 @@ alias reff='sudo pacman -Syyu'
 alias pin='sudo pacman -S'
 alias prm='sudo pacman -Rsn'
 alias pss='pacman -Ss'
+alias rml='sudo rm /var/lib/pacman/db.lck'
 
 # Paru
 alias asas=paru
