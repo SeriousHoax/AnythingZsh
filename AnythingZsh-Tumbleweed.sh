@@ -65,7 +65,7 @@ echo -e "${GREEN}Updating font cache...${NC}"
 sudo fc-cache -fv
 
 # Remove temporary font directory
-echo -e "${GREEN}Cleaning up downloaded font files...${NC}"
+echo -e "${GREEN}Removing temporary font directory...${NC}"
 rm -rf $FONT_DEST_DIR
 
 # Final Step: Done
