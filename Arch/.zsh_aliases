@@ -14,12 +14,15 @@ alias ass='paru -Ss'
 
 # Apps
 alias ff=fastfetch
+alias grep="grep --color"
+alias cls=clear
+alias ls="eza -a"
 
 # Update mirrors: Arch
-alias upd-a='rate-mirrors --disable-comments-in-file --protocol=https arch --max-delay 7200 | sudo tee /etc/pacman.d/mirrorlist'
+alias upd-a='rate-mirrors --disable-comments-in-file arch | sudo tee /etc/pacman.d/mirrorlist'
 
 # Update mirrors: Chaotic-Aur
-alias upd-c='rate-mirrors --disable-comments-in-file --protocol=https chaotic-aur  | sudo tee /etc/pacman.d/chaotic-mirrorlist'
+alias upd-c='rate-mirrors --disable-comments-in-file chaotic-aur | sudo tee /etc/pacman.d/chaotic-mirrorlist'
 
 # Update all mirrors, Pacman, AUR and Chaotic-Aur packages
 alias upd-all='upd-a && upd-c && paru -Syyu'

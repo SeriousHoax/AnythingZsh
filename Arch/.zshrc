@@ -27,3 +27,6 @@ autoload -Uz promptinit && promptinit && prompt powerlevel10k
 if [ -f ~/.zsh_aliases ]; then
     source ~/.zsh_aliases
 fi
+
+# Command-not-found updater
+source /usr/share/doc/pkgfile/command-not-found.zsh
